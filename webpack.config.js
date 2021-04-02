@@ -60,6 +60,10 @@ module.exports = {
 
     plugins: [
         new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'assets/css/style.css',
+        }),
+        new OptimizeCssAssetsPlugin({}),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
@@ -72,10 +76,10 @@ module.exports = {
             template: './src/components/textfield.html',
             filename: 'components/textfield.html',
         }),
-        new MiniCssExtractPlugin({
-            filename: 'assets/css/style.css',
+        new HtmlWebpackPlugin({
+            template: './src/components/card.html',
+            filename: 'components/card.html',
         }),
-        new OptimizeCssAssetsPlugin({}),
     ],
 
 };
