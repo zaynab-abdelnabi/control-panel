@@ -68,6 +68,10 @@ module.exports = {
             template: './src/components/button.html',
             filename: 'components/button.html',
         }),
+        new HtmlWebpackPlugin({
+            template: './src/components/textfield.html',
+            filename: 'components/textfield.html',
+        }),
         new MiniCssExtractPlugin({
             filename: 'assets/css/style.css',
         }),
