@@ -39,6 +39,33 @@ module.exports = {
                 ],
             },
             {
+                test: /\.(woff|woff2|ttf|eot|svg)$/,
+                exclude: /images/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: "assets/fonts",
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|svg|jpe?g|gif)$/i,
+                exclude: /fonts/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: "images",
+                        },
+                    },
+                ],
+            },
+
+            {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
@@ -48,27 +75,6 @@ module.exports = {
                     }
                 }
             },
-            {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                    },
-                ],
-            },
-            {
-                test: /\.(woff|woff2|ttf|eot|svg)$/,
-                exclude: /images/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'assets/fonts'
-                        }
-                    }
-                ]
-            }
         ],
     },
 
@@ -102,6 +108,11 @@ module.exports = {
             template: './src/components/banner.html',
             filename: 'components/banner.html',
             chunks: ['dist', 'assets/js/banner'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/list.html',
+            filename: 'components/list.html',
+            chunks: ['dist'],
         }),
     ],
 
