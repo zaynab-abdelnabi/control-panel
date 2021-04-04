@@ -5,11 +5,15 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry:
+    {
+        'dist': './src/index.js',
+        'assets/js/banner': './src/assets/js/banner.js'
+    },
     output: {
         publicPath: '/',
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].js'
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -33,6 +37,16 @@ module.exports = {
                     'postcss-loader',
                     'sass-loader',
                 ],
+            },
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
@@ -67,18 +81,27 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+            chunks: ['dist'],
         }),
         new HtmlWebpackPlugin({
             template: './src/components/button.html',
             filename: 'components/button.html',
+            chunks: ['dist'],
         }),
         new HtmlWebpackPlugin({
             template: './src/components/textfield.html',
             filename: 'components/textfield.html',
+            chunks: ['dist'],
         }),
         new HtmlWebpackPlugin({
             template: './src/components/card.html',
             filename: 'components/card.html',
+            chunks: ['dist'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/banner.html',
+            filename: 'components/banner.html',
+            chunks: ['dist', 'assets/js/banner'],
         }),
     ],
 

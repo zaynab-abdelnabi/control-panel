@@ -1,0 +1,51 @@
+$color-banner: #47c1bf;
+$color-banner-light:#b7ecec;
+$color-banner-lighter: #e0f5f5;
+$color-banner-dark:#00848e;
+$size-icon: 32px;
+
+.c-banner{
+    @include e-card;
+    background-color: $color-banner-lighter;
+    border-top: 3px solid $color-banner-dark;
+    padding: spacing("small") spacing("extra-wide");
+    position: relative;
+}
+.c-banner--title{
+    font-weight: normal;
+    color: $color-title-subdued;
+}
+.c-banner--desc{
+    font-size: 14px;
+}
+.c-banner--close, .c-banner--icon{
+    position: absolute;
+    top: spacing("small");
+}
+.c-banner--icon{
+    color: $color-banner-dark;
+    background-color: $color-banner-light;
+    right: spacing("normal");
+    width: $size-icon;
+    height: $size-icon;
+    line-height: $size-icon !important;
+    text-align: center;
+    border-radius: 50%;
+}
+.c-banner--close{
+    left: spacing("normal");
+    cursor: pointer;
+}
+.c-banner > *{
+    transition: opacity 200ms ease;
+}
+.c-banner{
+    transition: transform 400ms ease-out 300ms;
+}
+.c-banner.collapse > *{
+    opacity: 0;
+}
+.c-banner.collapse{
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+}
