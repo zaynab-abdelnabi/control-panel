@@ -1,0 +1,27 @@
+.c-list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(black, 0.05);
+    padding: spacing("extra-small") spacing("small");
+}
+.c-list--media{
+    height: 60px;
+    width: auto;
+    margin-left: spacing("small");
+}
+.c-list--data{
+    flex-grow: 1;
+    margin-left: spacing("small");
+}
+.c-list--actions{
+    margin-right: auto;
+    text-align: left;
+    margin-left: spacing("small");
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+.c-list:hover .c-list--actions{
+    opacity: 1;
+}

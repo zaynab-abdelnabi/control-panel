@@ -1,5 +1,5 @@
 (function () {
-    const closeBanners = document.querySelectorAll(".c-banner--close");
+    const closeBanners = document.querySelectorAll(".js-banner-close");
     closeBanners.forEach(closeBanner => {
         closeBanner.addEventListener("click", event => {
             const banner = event.target.parentNode;

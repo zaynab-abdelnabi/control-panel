@@ -8,7 +8,8 @@ module.exports = {
     entry:
     {
         'dist': './src/index.js',
-        'assets/js/banner': './src/assets/js/banner.js'
+        'assets/js/banner': './src/assets/js/banner.js',
+        'assets/js/tabs': './src/assets/js/tabs.js',
     },
     output: {
         publicPath: '/',
@@ -113,6 +114,11 @@ module.exports = {
             template: './src/components/list.html',
             filename: 'components/list.html',
             chunks: ['dist'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/tabs.html',
+            filename: 'components/tabs.html',
+            chunks: ['dist','assets/js/tabs'],
         }),
     ],
 
