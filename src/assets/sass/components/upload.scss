@@ -1,0 +1,94 @@
+.c-upload{
+    @include e-card;
+    padding: spacing("normal") spacing("normal") spacing("wide");
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.c-upload--header{
+    display: flex;
+    justify-content: space-between;
+}
+.c-upload--label{
+    color: $color-link;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: auto;
+}
+.c-upload--remove{
+    display: none;
+    color: $color-red;
+}
+.c-upload--body{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.c-upload--image{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/upload.svg") no-repeat center;
+    background-size: 50%;
+    margin-bottom: spacing("small");
+    img{
+        max-width: 100%;
+        height: auto;
+        display: inline;
+    }
+}
+.c-upload--field{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10px;
+}
+.c-upload--subtitle{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+}
+
+//small
+.c-upload--small{
+    width: initial;
+    height: initial;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    .c-upload--body{
+        @include e-card;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+    .c-upload--label{
+        margin-left: auto;
+    }
+    .c-upload--remove{
+        margin-right: initial;
+    }
+}
+
+
+.has-image.c-upload{
+    .c-upload--remove{
+        display: block;
+    }
+    .c-upload--image{
+        background: none;
+    }
+    img{
+        display: block;
+    }
+}

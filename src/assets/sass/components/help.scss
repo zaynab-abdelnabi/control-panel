@@ -1,0 +1,14 @@
+.c-help{
+    @include e-card;
+    display: flex;
+    align-items: center;
+    padding: spacing();
+    border-radius: (spacing("small")*2);
+    margin: spacing("wide") auto;
+    width: fit-content;
+}
+.c-help--icon{
+    margin-left: spacing("extra-small");
+    color: $color-primary;
+    font-size: 20px;
+}

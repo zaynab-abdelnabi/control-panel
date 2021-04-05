@@ -10,6 +10,7 @@ module.exports = {
         'dist': './src/index.js',
         'assets/js/banner': './src/assets/js/banner.js',
         'assets/js/tabs': './src/assets/js/tabs.js',
+        'assets/js/upload': './src/assets/js/upload.js',
     },
     output: {
         publicPath: '/',
@@ -118,7 +119,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/components/tabs.html',
             filename: 'components/tabs.html',
-            chunks: ['dist','assets/js/tabs'],
+            chunks: ['dist', 'assets/js/tabs'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/upload.html',
+            filename: 'components/upload.html',
+            chunks: ['dist', 'assets/js/upload'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/help.html',
+            filename: 'components/help.html',
+            chunks: ['dist'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/summary.html',
+            filename: 'components/summary.html',
+            chunks: ['dist'],
         }),
     ],
 
