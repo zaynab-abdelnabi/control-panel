@@ -141,6 +141,11 @@ module.exports = {
             filename: 'components/actions.html',
             chunks: ['dist'],
         }),
+        new HtmlWebpackPlugin({
+            template: './src/components/sidebar.html',
+            filename: 'components/sidebar.html',
+            chunks: ['dist'],
+        }),
     ],
 
 };
