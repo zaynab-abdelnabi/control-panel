@@ -1,0 +1,57 @@
+$product-media-size: 40px;
+
+.c-table{
+    @include e-card;
+    width: 100%;
+    padding: 0 0 spacing("normal") 0;
+}
+.c-table--header{
+    display: flex;
+    align-items: center;
+    margin-bottom: spacing("small");
+    padding: 0 spacing("normal");
+}
+
+.c-table--title{
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: spacing("small");
+    padding: spacing("normal");
+}
+.c-table--navigation{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.c-table--arrows{
+    margin-right: spacing("small");
+}
+.c-table--data{
+    width: 100%;
+    font-size: 13px;
+    border-collapse: collapse;
+    th{
+        text-align: right;
+    }
+    th,td{
+        &:first-child{
+            padding-right: spacing("normal");
+            width: 75px;
+        }
+        padding: spacing("extra-small") 0;
+        border-bottom: 1px solid rgba(darken(white, 40%), 0.15);
+        img{
+            width: $product-media-size;
+            height: $product-media-size;
+            vertical-align: middle;
+        }
+    }
+}
+
+.c-table--footer{
+    display: flex;
+    flex-flow: row-reverse;
+    padding-top: spacing("normal");
+    padding-left: spacing("normal");
+}
