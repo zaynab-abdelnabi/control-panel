@@ -11,6 +11,7 @@ module.exports = {
         'assets/js/banner': './src/assets/js/banner.js',
         'assets/js/tabs': './src/assets/js/tabs.js',
         'assets/js/upload': './src/assets/js/upload.js',
+        'assets/js/chart': './src/assets/js/chart.js',
     },
     output: {
         publicPath: '/',
@@ -150,6 +151,11 @@ module.exports = {
             template: './src/components/table.html',
             filename: 'components/table.html',
             chunks: ['dist'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/components/chart.html',
+            filename: 'components/chart.html',
+            chunks: ['dist','assets/js/chart'],
         }),
     ],
 

@@ -19,10 +19,13 @@ $product-media-size: 40px;
     padding: spacing("normal");
 }
 .c-table--navigation{
-    margin-right: auto;
+    // margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.c-table--actions{
+    margin-left: auto;
 }
 .c-table--arrows{
     margin-right: spacing("small");
