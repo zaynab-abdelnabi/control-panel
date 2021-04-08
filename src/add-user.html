@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة مستخدم</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <sidebar></sidebar>
+        <div class="single-page">
+            <header class="page-header">
+                <h1 class="page-title">إضافة مستخدم
+                </h1>
+                <button class="c-btn c-btn--primary" type="submit" name="submit" form="add-user">إضافة مستخدم</button>
+            </header>
+            <form action="" class="c-form" name="add-user">
+                <div class="c-form--controls">
+                    <div class="c-upload c-upload--small js-upload">
+                        <header class="c-upload--header">
+                            <h4 class="c-upload--title">صورة المستخدم</h4>
+                        </header>
+                        <div class="c-upload--body">
+                            <label for="upload-image" class="c-upload--label">ارفع صورة</label>
+                            <img class="js-upload-placeholder">
+                            <input type="file" name="upload-image" id="upload-image" accept= "image/*" class="c-upload--field js-upload-value">
+                        </div>
+                        <span class="c-upload--label c-upload--remove js-upload-remove">احذف الصورة</span>
+                    </div>
+                    <div class="c-form--row">
+                        <div class="c-textfield">
+                            <label for="user-name" class="c-textfield--label">اسم المستخدم</label>
+                            <input type="text" class="c-textfield--input" id="user-name" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="c-form--row">
+                        <div class="c-textfield">
+                            <label for="user-email" class="c-textfield--label">البريد الالكتروني</label>
+                            <input type="email" class="c-textfield--input" id="user-email" placeholder="" required>
+                        </div>
+                    </div>
+                    <div class="c-form--row">
+                        <div class="c-textfield">
+                            <label for="user-password" class="c-textfield--label">كلمة المرور</label>
+                            <input type="password" class="c-textfield--input c-textfield--input--left" id="user-password" placeholder="" required>
+                        </div>
+                        <div class="c-textfield">
+                            <label for="user-password-2" class="c-textfield--label">تأكيد كلمة المرور</label>
+                            <input type="password" class="c-textfield--input c-textfield--input--left" id="user-password-2" placeholder="" required>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <help></help>
+        </div>
+    </div>
+</body>
+
+</html>

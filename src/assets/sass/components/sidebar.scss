@@ -5,7 +5,7 @@ $sidebar-logo-height: $sidebar-control-width;
 .c-sidebar{
     width: $layout-sidebar;
     height: 100vh;
-    background-color: $color-background;
+    background-color:  rgba($color-blue-dark, 0.1);
     padding: spacing("wide") spacing("small");
     display: flex;
     position: fixed;

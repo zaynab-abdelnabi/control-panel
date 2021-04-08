@@ -1,8 +1,8 @@
 .c-upload{
     @include e-card;
     padding: spacing("normal") spacing("normal") spacing("wide");
-    width: 400px;
-    height: 400px;
+    min-width: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,8 +61,8 @@
 
 //small
 .c-upload--small{
-    width: initial;
-    height: initial;
+    min-width: initial;
+    min-height: initial;
     box-shadow: none;
     background: none;
     padding: 0;

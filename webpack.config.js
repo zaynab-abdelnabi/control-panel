@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const path = require('path');
 
 module.exports = {
@@ -90,8 +91,35 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
+            chunks: ['dist', 'assets/js/banner', 'assets/js/tabs', 'assets/js/chart'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/add-product.html',
+            filename: 'add-product.html',
+            chunks: ['dist', 'assets/js/upload'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/products.html',
+            filename: 'products.html',
             chunks: ['dist'],
         }),
+        new HtmlWebpackPlugin({
+            template: './src/users.html',
+            filename: 'users.html',
+            chunks: ['dist'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/orders.html',
+            filename: 'orders.html',
+            chunks: ['dist'],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/add-user.html',
+            filename: 'add-user.html',
+            chunks: ['dist', 'assets/js/upload'],
+        }),
+
+
         new HtmlWebpackPlugin({
             template: './src/components/button.html',
             filename: 'components/button.html',
@@ -155,7 +183,29 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/components/chart.html',
             filename: 'components/chart.html',
-            chunks: ['dist','assets/js/chart'],
+            chunks: ['dist', 'assets/js/chart'],
+        }),
+
+
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/help.html'),
+            location: 'help',
+            template_filename: ['index.html', 'add-product.html', 'products.html', 'users.html', 'orders.html', 'add-user.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/sidebar.html'),
+            location: 'sidebar',
+            template_filename: ['index.html','add-product.html', 'products.html', 'users.html', 'orders.html', 'add-user.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/banner.html'),
+            location: 'banner',
+            template_filename: ['index.html'],
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/components/chart.html'),
+            location: 'chart',
+            template_filename: ['index.html'],
         }),
     ],
 

@@ -9,7 +9,152 @@
 </head>
 
 <body>
-
+    <div class="page-container">
+        <sidebar></sidebar>
+        <div class="main-page">
+            <header class="home-head">
+                <h2 class="welcome">
+                    مرحبا زينب, اتمنى ان يكون نهارك سعيد <br>
+                    شاهد آخر المستجدات في متجرك
+                </h2>
+                <div class="c-summary">
+                    <div class="c-summary--data">
+                        <span class="c-summary--value">55</span>
+                        <span class="c-summary--key">طلب</span>
+                    </div>
+                    <div class="c-summary--data">
+                        <span class="c-summary--value">1304</span>
+                        <span class="c-summary--key">زائر</span>
+                    </div>
+                    <div class="c-summary--data">
+                        <span class="c-summary--value">716$</span>
+                        <span class="c-summary--key">مبيعات</span>
+                    </div>
+                </div>
+            </header>
+            <ul class="c-actions">
+                <li class="c-action">
+                    <span class="c-action--title">10 طلبات تحتاج معالجة</span>
+                    <a href="#" class="c-btn c-action--link">مشاهدة الطلبات</a>
+                </li>
+                <li class="c-action">
+                    <span class="c-action--title">3 رسائل تحتاج الاجابة</span>
+                    <a href="#" class="c-btn c-action--link">مشاهدة الرسائل</a>
+                </li>
+                <li class="c-action">
+                    <span class="c-action--title">5 منتجات على وشك النفاذ</span>
+                    <a href="#" class="c-btn c-action--link">مشاهدة المنتجات</a>
+                </li>
+            </ul>
+            <div class="c-card">
+                <h3 class="c-card--title">معلومات الشحن غير متوفرة</h3>
+                <a href="#" class="c-btn c-btn--primary c-card--action">ربط معلومات الشحن</a>
+                <p class="c-card--desc">ان معلومات الشحن غير متوفرة عليك ان تملأ باقي المعلومات لإتمام عمليات الشحن</p>
+            </div>
+            <banner></banner>
+            <chart></chart>
+            <div class="c-tabs js-tabs">
+                <div class="c-tabs--control">
+                    <span class="c-tabs--tab js-tab-link is-active" data-index="orders">طلبات بحاجة لمراجعة</span>
+                    <span class="c-tabs--tab js-tab-link" data-index="products">منتجات على وشك النفاذ</span>
+                    <span class="c-tabs--tab js-tab-link" data-index="clients">زبائن جدد</span>
+                </div>
+                <div class="c-tabs--content">
+                    <div class="c-tabs--tabarea js-tabarea is-active" data-indexed="orders">
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-tabs--tabarea js-tabarea" data-indexed="products">
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-tabs--tabarea js-tabarea" data-indexed="clients">
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                        <div class="c-list">
+                            <img src="./assets/images/black-pants.jpg" alt="صورة منتج" class="c-list--media">
+                            <span class="c-list--data">سروال أسود</span>
+                            <span class="c-list--data">هشام جمال</span>
+                            <span class="c-list--data">القاهرة, مصر</span>
+                            <span class="c-list--data">50.00$</span>
+                            <div class="c-list--actions">
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--primary">تم الشحن</a>
+                                <a href="" class="c-list--action c-btn c-btn--small">تواصل</a>
+                                <a href="" class="c-list--action c-btn c-btn--small c-btn--delete">حذف الطلب</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <help></help>
+        </div>
+    </div>
 </body>
 
 </html>
