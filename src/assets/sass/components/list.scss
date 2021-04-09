@@ -1,10 +1,11 @@
+$container-horizontal-spacing: spacing("small");
 .c-list{
     display: flex;
     align-items: center;
     width: 100%;
     background-color: white;
     box-shadow: 0 0 0 1px rgba(black, 0.05);
-    padding: spacing("extra-small") spacing("small");
+    padding: spacing("extra-small") $container-horizontal-spacing;
 }
 .c-list--media{
     height: 60px;
@@ -27,4 +28,28 @@
 }
 .c-list--table--row{
     display: table-row;
+}
+
+//media responsive
+
+@media(max-width: $bp-tablet-small){
+    .c-list{
+        flex-wrap: wrap;
+    }
+    .c-list--actions{
+        opacity: 1;
+        text-align: right;
+        margin-left: initial;
+        margin-right: 0;
+    }
+    .c-list--data:not(:first-of-type), .c-list--actions{
+        width: 100%;
+        padding-top: spacing("extra-small");
+        padding-bottom: spacing("extra-small");
+        // border-top: 1px solid #f8f8f8;
+        margin-left: -$container-horizontal-spacing;
+        margin-right: -$container-horizontal-spacing;
+        padding-left: $container-horizontal-spacing;
+        padding-right: $container-horizontal-spacing;
+    }
 }

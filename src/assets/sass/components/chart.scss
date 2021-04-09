@@ -1,12 +1,15 @@
 .c-chart{
     @include e-card;
     width: 100%;
+    padding-top: spacing("normal");
 }
 .c-chart--header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 spacing("normal");
+    flex-wrap: wrap;
+    margin-bottom: spacing("small");
 }
 .c-chart--header--title{
     margin-left: auto;

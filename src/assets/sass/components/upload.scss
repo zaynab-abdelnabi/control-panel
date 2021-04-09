@@ -1,8 +1,9 @@
+$upload-size:400px;
 .c-upload{
     @include e-card;
     padding: spacing("normal") spacing("normal") spacing("wide");
-    min-width: 400px;
-    min-height: 400px;
+    min-width: $upload-size;
+    min-height: $upload-size;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,7 +36,7 @@
     align-items: center;
     justify-content: center;
     background: url("../images/upload.svg") no-repeat center;
-    background-size: 50%;
+    background-size: 200px;
     margin-bottom: spacing("small");
     img{
         max-width: 100%;
@@ -90,5 +91,14 @@
     }
     img{
         display: block;
+    }
+}
+
+// media responsive
+
+@media(max-width: $upload-size){
+    .c-upload{
+        min-width: initial;
+        width: 100%;
     }
 }

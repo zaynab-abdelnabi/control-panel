@@ -2,7 +2,7 @@
     @include e-card;
     display: flex;
     flex-wrap: wrap;
-    padding: spacing("normal");
+    padding: spacing("normal")/2 spacing("normal");
     width: 100%;
 }
 .c-card--title{
@@ -12,6 +12,10 @@
     font-size: 17px;
     margin-left: spacing();
 }
+.c-card--title, .c-card--action{
+    margin-top: spacing("normal")/2;
+    margin-bottom: spacing("normal")/2;
+}
 
 .c-card--desc{
     font-size: 14px;
@@ -20,9 +24,6 @@
 
 .c-card--no-desc{
     align-items: center;
-    .c-card--title{
-        margin-bottom: 0;
-    }
 }
 
 .c-card--no-action{

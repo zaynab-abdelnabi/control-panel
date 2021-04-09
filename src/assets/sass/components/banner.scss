@@ -49,3 +49,22 @@ $size-icon: 32px;
     transform: scaleY(0);
     transform-origin: 50% 0;
 }
+
+// media responsive
+
+@media(max-width: $bp-phone-normal){
+    .c-banner{
+        padding-left: spacing("small");
+        padding-right: spacing("small");
+    }
+    .c-banner--icon{
+        right: spacing("small");
+    }
+    .c-banner--close{
+        left: spacing("small");
+    }
+    .c-banner--title{
+        margin-left: spacing("normal");
+        margin-right: $size-icon + spacing("extra-small");
+    }
+}
