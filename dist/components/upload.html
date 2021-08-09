@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload Component's page</title>
+<script defer src="/dist.js"></script><script defer src="/assets/js/upload.js"></script><link href="/assets/css/style.css" rel="stylesheet"></head>
+<body>
+    <div class="component-container">
+        <div class="c-upload js-upload">
+            <header class="c-upload--header">
+                <h4 class="c-upload--title">صورة المنتج</h4>
+                <label for="upload-image" class="c-upload--label">ارفع صورة</label>
+                <span class="c-upload--label c-upload--remove js-upload-remove">احذف الصورة</span>
+            </header>
+            <div class="c-upload--body">
+                <div class="c-upload--image"><img class="js-upload-placeholder"></div>
+                <input type="file" name="upload-image" id="upload-image" accept= "image/*" class="c-upload--field js-upload-value">
+                <span class="c-upload--subtitle">اسحب الصورة هنا لرفعها</span>
+            </div>
+        </div>
+        <div class="c-upload c-upload--small js-upload">
+            <header class="c-upload--header">
+                <h4 class="c-upload--title">صورة المستخدم</h4>
+            </header>
+            <div class="c-upload--body">
+                <label for="upload-image" class="c-upload--label">ارفع صورة</label>
+                <img class="js-upload-placeholder">
+                <input type="file" name="upload-image" id="upload-image" accept= "image/*" class="c-upload--field js-upload-value">
+            </div>
+            <span class="c-upload--label c-upload--remove js-upload-remove">احذف الصورة</span>
+        </div>
+        
+    </div>
+</body>
+</html>
